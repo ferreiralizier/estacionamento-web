@@ -1,0 +1,18 @@
+<div class="container">
+    <h2>Escolha a loja de destino:</h2>
+  
+    <select (change)="escolherLoja($event)">
+      <option value="" disabled selected>Selecione uma loja</option>
+      <option *ngFor="let loja of lojas" [value]="loja.nome">
+        {{ loja.nome }}
+      </option>
+    </select>
+  
+    <div *ngIf="rota" class="rota-info">
+      <h3>Vaga mais próxima:</h3>
+      <p><strong>Número:</strong> {{ rota.numero }}</p>
+      <p><strong>Setor:</strong> {{ rota.setor }}</p>
+      <p><strong>Coordenadas:</strong> ({{ rota?.coordenadaX }}, {{ rota?.coordenadaY }})</p>
+    </div>
+  </div>
+  
