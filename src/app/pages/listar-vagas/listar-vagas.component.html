@@ -1,0 +1,5 @@
+<h2>Lista de Vagas</h2>
+
+<div *ngFor="let vaga of vagas" [ngClass]="vaga.disponivel ? 'vaga-livre' : 'vaga-ocupada'">
+    Vaga {{ vaga.numero }} - {{ vaga.setor }}
+</div>
